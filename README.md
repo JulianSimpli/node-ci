@@ -6,12 +6,10 @@ A starter project for mastering advanced Node.js concepts.
 
 - [Project Structure](#project-structure)
 - [Setup Instructions](#setup-instructions)
-- [Development Workflow](#development-workflow)
 - [Authentication, Database & Caching](#authentication-database--caching)
 - [API Endpoints](#api-endpoints)
 - [Client Application](#client-application)
 - [Continuous Integration](#continuous-integration)
-- [Common Issues](#common-issues)
 
 ## Project Structure
 
@@ -30,13 +28,6 @@ A starter project for mastering advanced Node.js concepts.
 3. Ensure Redis is running locally or update your configuration for a remote Redis instance.
 4. Return to the root and run `npm run dev` to start both the server and client.
 5. Open `http://localhost:3000` in your browser.
-
-## Development Workflow
-
-1. Visit `/blogs` to access the blog feature.
-2. The React app loads and requests user and blog data from the backend.
-3. Express route handlers process requests and interact with MongoDB via Mongoose and Redis for caching.
-4. Data is returned to the React app for rendering.
 
 ## Authentication, Database & Caching
 
@@ -59,6 +50,6 @@ A starter project for mastering advanced Node.js concepts.
 
 ## Continuous Integration
 
-- CI is set up with Travis CI.
-- On each push or pull request, Travis runs tests and checks code quality.
-- See `.travis.yml` for configuration details.
+- CI is now set up with **GitHub Actions** (see `.github/workflows/deploy.yml` for configuration).
+- Travis CI is deprecated and no longer used (`.travis.yml` file).
+- On each push or pull request, GitHub Actions runs tests and checks code quality.
