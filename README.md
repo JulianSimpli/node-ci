@@ -1,6 +1,6 @@
 # NodeJS Concepts
 
-A starter project for mastering advanced Node.js concepts.
+A basic blog app built with ReactJS to implement advanced Node.js concepts.
 
 ## Table of Contents
 
@@ -10,6 +10,7 @@ A starter project for mastering advanced Node.js concepts.
 - [API Endpoints](#api-endpoints)
 - [Client Application](#client-application)
 - [Continuous Integration](#continuous-integration)
+- [File Uploads with AWS S3](#file-uploads-with-aws-s3)
 
 ## Project Structure
 
@@ -53,3 +54,7 @@ A starter project for mastering advanced Node.js concepts.
 - CI is now set up with **GitHub Actions** (see `.github/workflows/deploy.yml` for configuration).
 - Travis CI is deprecated and no longer used (`.travis.yml` file).
 - On each push or pull request, GitHub Actions runs tests and checks code quality.
+
+## File Uploads with AWS S3
+
+- Integrated AWS S3 for storing uploaded files, with proper IAM configuration for secure access and management.

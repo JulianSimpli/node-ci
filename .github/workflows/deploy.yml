@@ -29,18 +29,27 @@ jobs:
       PORT: 3000
 
     steps:
+      # 1. Descarga el código de tu repositorio
       - uses: actions/checkout@v2
+
+      # 2. Instala Node.js versión 18.15.0
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+
+      # 3. Instala dependencias y construye
       - name: Install Dependencies
         run: |
           npm install --legacy-peer-deps
           npm run build
+
+      # 4. Inicia el servidor en background
       - name: Start server
         run: |
           nohup npm run start &
           sleep 3
+
+      # 5. Ejecuta las pruebas
       - name: Run tests
         run: npm run test
